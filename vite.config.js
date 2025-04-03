@@ -4,16 +4,7 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 
-
 export default defineConfig(({ command }) => {
-  export default {
-    resolve: {
-      alias: {
-        flatpickr: "node_modules/flatpickr/dist/flatpickr.js",
-      },
-    },
-  };
-
   return {
     base: '/goit-js-hw-10/',
     define: {
@@ -23,7 +14,7 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: glob.sync('./src/index.html'), // Ensure the path is correct
+        input: glob.sync('./src/index.html'),
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
@@ -59,4 +50,3 @@ export default defineConfig(({ command }) => {
     ],
   };
 });
-

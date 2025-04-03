@@ -4,18 +4,6 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 document.addEventListener("DOMContentLoaded", () => {
-    // ... (kodunuzun geri kalanı)
-});
-
-export default {
-  resolve: {
-    alias: {
-      flatpickr: 'node_modules/flatpickr/dist/flatpickr.js',
-    },
-  },
-};
-
-document.addEventListener("DOMContentLoaded", () => {
     const datePicker = document.getElementById("datetime-picker");
     const startButton = document.querySelector("[data-start]");
     const daysSpan = document.querySelector("[data-days]");
