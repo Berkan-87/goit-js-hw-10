@@ -8,8 +8,8 @@ export default defineConfig({
   base: '/goit-js-hw-10/',
   resolve: {
     alias: {
-      flatpickr: 'flatpickr',  // 'node_modules/flatpickr' yolunu kullanmaya gerek yok
-      iziToast: 'izitoast',  // 'node_modules/izitoast' yolunu kullanmaya gerek yok
+      flatpickr: 'flatpickr',  
+      iziToast: 'izitoast',  
     },
   },
   define: {
@@ -54,3 +54,4 @@ export default defineConfig({
     }),
   ],
 });
+
