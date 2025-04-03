@@ -1,0 +1,4 @@
+exclude: [node_modules/]
+baseurl: "/goit-js-hw-10"
+url: "https://berkan-87.github.io"
+theme: jekyll-theme-primer
