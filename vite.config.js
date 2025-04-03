@@ -6,6 +6,14 @@ import SortCss from 'postcss-sort-media-queries';
 
 
 export default defineConfig(({ command }) => {
+  export default {
+    resolve: {
+      alias: {
+        flatpickr: "node_modules/flatpickr/dist/flatpickr.js",
+      },
+    },
+  };
+
   return {
     base: '/goit-js-hw-10/',
     define: {

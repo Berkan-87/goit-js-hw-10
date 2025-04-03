@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promise Üreteci</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-    <form class="form">
-        <label>
-            
-          Delay (ms)
-          <br>
-          <br>
-          <input type="number" name="delay" required />
-        </label>
-      
-        <fieldset>
-            <legend>State</legend>
-            <label class="state-label">
-              <input type="radio" name="state" value="fulfilled" required />
-              <span class="state-text">Fulfilled</span>
-            </label>
-            <label class="state-label">
-              <input type="radio" name="state" value="rejected" required />
-              <span class="state-text">Rejected</span>
-            </label>
-        </fieldset>          
-      
-        <button type="submit">Create notification</button>
-    </form>
-      
 
-    <script type="module" src="./js/02-snackbar.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise Üreteci</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <form class="form">
+    <label>
+      Delay (ms)
+      <br><br>
+      <input type="number" name="delay" required />
+    </label>
+
+    <fieldset>
+      <legend>State</legend>
+      <label class="state-label">
+        <input type="radio" name="state" value="fulfilled" required />
+        <span class="state-text">Fulfilled</span>
+      </label>
+      <label class="state-label">
+        <input type="radio" name="state" value="rejected" required />
+        <span class="state-text">Rejected</span>
+      </label>
+    </fieldset>
+
+    <button type="submit">Create notification</button>
+  </form>
+
+  <script type="module" src="./js/02-snackbar.js"></script>
 </body>
+
 </html>
