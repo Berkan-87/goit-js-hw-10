@@ -1,26 +1,30 @@
 import { defineConfig } from 'vite';
-import { glob } from 'glob';
+import { resolve } from 'path';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig({
   base: '/goit-js-hw-10/',
-  resolve: {
-    alias: {
-      // Bu kısmı kaldırıyoruz çünkü flatpickr ve iziToast public/ dizininde olacak
-      // flatpickr: 'flatpickr',
-      // iziToast: 'izitoast',
-    },
-  },
+  root: 'src',
   define: {
     global: {},
   },
-  root: 'src',
+  resolve: {
+    alias: {
+      // Gerek yok çünkü kütüphaneler import ile geliyor
+    },
+  },
   build: {
     sourcemap: true,
+    outDir: '../dist',
+    emptyOutDir: true,
     rollupOptions: {
-      input: glob.sync('./src/index.html'),
+      input: {
+        main: resolve(__dirname, 'src/index.html'),
+        timer: resolve(__dirname, 'src/01-timer.html'),
+        snackbar: resolve(__dirname, 'src/02-snackbar.html'),
+      },
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
@@ -41,8 +45,6 @@ export default defineConfig({
         },
       },
     },
-    outDir: '../dist',
-    emptyOutDir: true,
   },
   server: {
     open: true,
