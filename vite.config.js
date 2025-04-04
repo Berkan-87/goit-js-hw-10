@@ -8,8 +8,9 @@ export default defineConfig({
   base: '/goit-js-hw-10/',
   resolve: {
     alias: {
-      flatpickr: 'flatpickr',  
-      iziToast: 'izitoast',  
+      // Bu kısmı kaldırıyoruz çünkü flatpickr ve iziToast public/ dizininde olacak
+      // flatpickr: 'flatpickr',
+      // iziToast: 'izitoast',
     },
   },
   define: {
@@ -54,4 +55,3 @@ export default defineConfig({
     }),
   ],
 });
-
